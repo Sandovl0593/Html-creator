@@ -2,10 +2,10 @@
 // Created by adria on 20/2/2023.
 //
 
-#ifndef HTML_CREATOR_HTML_INIT_BUILDER_H
-#define HTML_CREATOR_HTML_INIT_BUILDER_H
+#ifndef HTML_CREATOR_HEAD_TAG_H
+#define HTML_CREATOR_HEAD_TAG_H
 
-#include <bits//stdc++.h>
+#include <string>
 using namespace std;
 
 struct Link_Header {
@@ -33,4 +33,4 @@ public:
     }
 };
 
-#endif //HTML_CREATOR_HTML_INIT_BUILDER_H
+#endif //HTML_CREATOR_HEAD_TAG_H

@@ -3,4 +3,4 @@ project(Html_creator)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Html_creator main.cpp html_init_builder.h)
+add_executable(Html_creator main.cpp head_tag.h)
