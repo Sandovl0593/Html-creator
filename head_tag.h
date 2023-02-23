@@ -16,16 +16,18 @@ struct Link_Header {
 };
 
 class Head_Tag {
-    string title = "";
+    string title = "Document";
     vector<Link_Header> tags_link = {};
+
 public:
+    Head_Tag() = default;
     Head_Tag(string title_): title(title_) {}
 
     void add_link(string href, string rel) {
         tags_link.push_back(Link_Header(href, rel));
     }
 
-    string inner_head() {
+    string inner_cout() {
         string list_links = "";
         for (const auto link: tags_link)
             list_links += link.inner;

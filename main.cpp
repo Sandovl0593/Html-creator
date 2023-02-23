@@ -10,7 +10,8 @@
 #include "head_tag.h"
 
 int main() {
-    Link_Header link("style.css", "stylesheet");
-    cout << link.inner << endl;
+    Head_Tag head("Html");
+    head.add_link("style.css", "stylesheet");
+    cout << head.inner_cout() << endl;
     return 0;
 }
