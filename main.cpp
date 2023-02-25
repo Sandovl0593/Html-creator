@@ -8,9 +8,9 @@
 
 #include <iostream>
 #include <memory>
-#include "head_tag.h"
-#include "tag_builder.h"
-#include "paragraph_tag.h"
+// #include "base_tags/head_tag.h"
+#include "base_tags/tag_builder.h"
+#include "text_tags/paragraph_tag.h"
 using namespace std;
 
 int main() {
