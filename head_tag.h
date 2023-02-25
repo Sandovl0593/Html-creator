@@ -6,6 +6,7 @@
 #define HTML_CREATOR_HEAD_TAG_H
 
 #include <string>
+#include <vector>
 using namespace std;
 
 struct Link_Header {

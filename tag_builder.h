@@ -7,29 +7,25 @@
 
 #include <vector>
 #include <string>
+#include <memory>
 using namespace std;
 
-class Tag_Builder;
-
 class Tag {
-    string name_tag;
-    [[maybe_unused]] vector<Tag> child_tag;
-    bool is_paired = true;
-
+    vector<unique_ptr<Tag>> child_tags;
 public:
-    void set_name_tag(string name_tag){ this->name_tag = name_tag; }
-    friend class Tag_Builder;
-    static Tag_Builder mount();
+    string inner_text = "";
     ~Tag() = default;
 };
 
 class Tag_Builder {
-    Tag tag;
+protected:
+    unique_ptr<Tag> tag_build;
 public:
-    operator Tag() const { return move(tag);}
-
-    void add_child_tag(string name_tag);
-    string inner_cout();
+    virtual unique_ptr<Tag> get()  { return move(tag_build); }
+    // virtual void add_child_tag(unique_ptr<Tag> child_tag_build) = 0;
+    virtual void add_inner_text() = 0;
+    virtual string inner_cout() = 0;
+    virtual ~Tag_Builder() { tag_build.reset(); }
 };
 
 #endif //HTML_CREATOR_TAG_BUILDER_H
